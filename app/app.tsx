@@ -2,6 +2,7 @@
   import React, { useState } from "react";
 
   import CustomTextField from "./components/textfield";
+  import { Link } from "expo-router";
 
   export default function App() {
     const [name, setName] = useState("");
@@ -17,11 +18,13 @@
     return (
       <View className="h-full">
         
-        <View className="h-20 flex bg-black justify-center items-center">
+        <View className="h-24 flex bg-black justify-center items-center">
           <View>
-            <Text className='text-white'>
-              By: Rafael D. Martinez
-            </Text>
+            <Link href={"https://github.com/<myGitHubUsername>"} >
+              <Text className='text-white'>
+                By: Rafael D. Martinez
+              </Text>
+            </Link>
             <Text className='text-white text-2xl'>
               Simple Student Information
             </Text>
@@ -44,7 +47,7 @@
               onChange={setCourse}
             />
             <TouchableOpacity
-              className="bg-black p-2 rounded-md"
+              className="bg-black p-2 mt-4 rounded-md"
               activeOpacity={0.8}
               onPress={handleTextChange}
             >

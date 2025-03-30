@@ -12,7 +12,7 @@ const CustomTextField = (props: Props) => {
     <View>
       <Text className="text-xl font-semibold">{props.field_name}</Text>
       <TextInput
-        className="border-2 border-slate-100"
+        className="border-2 mb-2 border-slate-200 focus:border-slate-300 rounded-md p-2"
         placeholder={props.btn_placeholder}
         value={props.value}
         onChangeText={props.onChange}
